@@ -1,4 +1,6 @@
 import React from "react";
+import DeleteIcon from "@material-ui/icons/Delete";
+import Zoom from "@material-ui/core/Zoom";
 
 export default function Note(props) {
 
@@ -10,7 +12,11 @@ export default function Note(props) {
     <div className="note">
       <h1> {props.title} </h1>
       <p> {props.content} </p>
-      <button onClick={handleClick}>DELETE</button>
+      <Zoom in= {true}>
+      <button onClick={handleClick}>
+       <DeleteIcon/>
+      </button>
+      </Zoom>
     </div>
   );
 }
